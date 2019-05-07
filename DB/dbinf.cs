@@ -8,10 +8,10 @@ namespace DB
 {
     interface dbinf
     {
-        bool insertCarinfo(string tablename,string carno,string userid,int count,string carid);
-        bool insertContactinfo(string tablename,string userid,string carno,DateTime times);
-        bool insertrfidman(string tablename,string cardid,string userid,string carno,string status);
-
+        bool insertCarinfo(string carno,string userid,int count,string carid);
+        bool insertContactinfo(string userid,string carno,DateTime times);
+        bool insertRfidman(string cardid,string userid,string carno,string status);
+        bool insertUserinfo(string userid, string IDcard, string username, string usersex);
 
         
     }
