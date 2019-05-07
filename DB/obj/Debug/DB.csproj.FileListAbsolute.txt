@@ -1,0 +1,13 @@
+F:\C#\DB\helloC\DB\bin\Debug\DB.exe.config
+F:\C#\DB\helloC\DB\bin\Debug\DB.exe
+F:\C#\DB\helloC\DB\bin\Debug\DB.pdb
+F:\C#\DB\helloC\DB\bin\Debug\BouncyCastle.Crypto.dll
+F:\C#\DB\helloC\DB\bin\Debug\Google.Protobuf.dll
+F:\C#\DB\helloC\DB\bin\Debug\MySql.Data.dll
+F:\C#\DB\helloC\DB\bin\Debug\Google.Protobuf.xml
+F:\C#\DB\helloC\DB\bin\Debug\MySql.Data.xml
+F:\C#\DB\helloC\DB\obj\Debug\DB.csprojAssemblyReference.cache
+F:\C#\DB\helloC\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
+F:\C#\DB\helloC\DB\obj\Debug\DB.csproj.CopyComplete
+F:\C#\DB\helloC\DB\obj\Debug\DB.exe
+F:\C#\DB\helloC\DB\obj\Debug\DB.pdb
