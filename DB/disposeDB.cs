@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace DB
 {
+
     public class disposeDB : dbinf
     {
         private string username = "root";
@@ -14,6 +15,7 @@ namespace DB
         private MySqlConnection myconn;
 
         /*构造函数，创建MySQL数据库的连接*/
+
         public disposeDB()
         {
             try {
@@ -96,6 +98,32 @@ namespace DB
             finally
             {
                 this.closeConn();
+            }
+        }
+        /*表中数据的选择语句*/
+        public MySqlDataReader selData(string tablename,string whereFieldname,string fieldValue)
+        {
+            string sql = "SELECT * FROM " + tablename + " WHERE "+whereFieldname+" = '"+fieldValue+"'";
+            return selDataFunc(sql);
+        }
+        public MySqlDataReader unioSelData(string table1,string table2,string field,string table1FieldValue)
+        {
+            string sql1 = "WHERE" + " " + "" + table1 + "" + "." + "" + field + "" + " " + "=" + " " + "" + table2 + "" + "." + "" + field + "" + " " + "AND" + " " + "" + table1 + "" + "." + "" + field + "" + " " + "=" + " " + "'" + table1FieldValue + "'";
+            string sql = "SELECT * FROM " + table1 + "," + table2 + "" + " " + sql1;
+            return selDataFunc(sql);
+        }
+        public MySqlDataReader selDataFunc(string sql)
+        {
+            try
+            {
+                this.openConn();
+                MySqlCommand cmd = new MySqlCommand(sql, this.myconn);
+                return cmd.ExecuteReader();
+            }
+            catch (MySqlException me)
+            {
+                Console.WriteLine(me.Message);
+                return null;
             }
         }
     }

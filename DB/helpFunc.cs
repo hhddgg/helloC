@@ -31,6 +31,16 @@ namespace DB
                 {
                     userid += ch[ran.Next(61)];
                 }
+                int num3 = ran.Next(10);
+                int num4 = 10 - num3;
+                for(int i = 0; i < num3; i++)
+                {
+                    userid += ch[ran.Next(61)];
+                }
+                for(int i = 0; i < num4; i++)
+                {
+                    userid += ch[ran.Next(61)];
+                }
                 return userid;
             }
             catch (Exception e)
