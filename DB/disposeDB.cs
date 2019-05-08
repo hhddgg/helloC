@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
 namespace DB
 {
 
@@ -124,6 +123,22 @@ namespace DB
             {
                 Console.WriteLine(me.Message);
                 return null;
+            }
+        }
+        public bool updateData(string table,string field,string value,string carno)
+        {
+            try
+            {
+                string sql = "UPDATE "+table+" SET "+field+" = '"+value+"' WHERE carno='"+carno+"'";
+                MySqlCommand cmd = new MySqlCommand(sql, this.myconn);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException me)
+            {
+                Console.WriteLine(me.Message);
+                return false;
+                
             }
         }
     }
